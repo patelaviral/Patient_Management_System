@@ -37,25 +37,4 @@ This is a production-ready **Patient Management System** built with **Java Sprin
 
 ## 🧱 Microservice Architecture
 
-```text
-+-------------------+        +-----------------+       +------------------+
-|  API Gateway      | <----> |  Auth Service   | <---> |  User DB (RDS)   |
-+--------+----------+        +--------+--------+       +------------------+
-         |                            |
-         |                            v
-         |                    +---------------+
-         |                    | JWT Validation|
-         |                    +---------------+
-         v
-+--------+---------+
-| Patient Service  |
-+--------+---------+
-         |        \
-         |         \ gRPC
-         v          v
-+----------------+  +----------------+
-| Billing Service|  | Analytics Svc  |
-+----------------+  +----------------+
-         |                ^
-         v                |
-     Kafka Topic <--------+
+![image alt](https://github.com/patelaviral/Patient_Management_System/blob/3ace8de086cbce83d117b837dc3139f3ae00d5c7/Architecture_of_PMS.png)
